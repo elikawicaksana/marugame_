@@ -1,26 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int angka, bilPrima = 1;
-
-    scanf("%d", &angka);
-
-    if (angka <= 1) {
-        bilPrima = 0;
-    }else{
-        for (int i = 2; i * i <= angka; i++) {
-            if (angka % i == 0) {
-                bilPrima = 0; 
-                break;
-            }
-        }
-    }
-
-    if (bilPrima){
+    long long N = 1;
+    
+    scanf("%ld", &N);
+    
+    if (N % 6 == 1 | N % 6 == 5 | N == 2 | N == 3){
         printf("PRIMA");
-    }else{
+    }else {
         printf("BUKAN");
     }
     
-    return 0;
+    return 0;
 }
